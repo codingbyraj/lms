@@ -14,7 +14,8 @@ if (process.env.HEROKU_POSTGRESQL_BRONZE_URL) {
 } else {     
      db = new Sequelize('learningsystem', 'root', 'root', {
         host: 'localhost',
-        dialect: 'mysql',        
+        dialect: 'sqlite',      
+          storage: './lms.db'
     })
 }
 
